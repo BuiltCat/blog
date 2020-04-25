@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Express中的MVC | 小半</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Express中的MVCMVC框架中的目录结构 routes&#x2F;  实现control层  Controller为控制器，负责接收用户请求，操作或提取model并最终交由view渲染    views&#x2F;  实现view层 View为视图，体现为最终展现给用户（广义，比如客户端）的形式，View根据一个或者多个Model的数据进行展示   models&#x2F;  实现models层 Model为模型，自身含">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Express中的MVC">
+<meta property="og:url" content="http://yoursite.com/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/index.html">
+<meta property="og:site_name" content="小半">
+<meta property="og:description" content="Express中的MVCMVC框架中的目录结构 routes&#x2F;  实现control层  Controller为控制器，负责接收用户请求，操作或提取model并最终交由view渲染    views&#x2F;  实现view层 View为视图，体现为最终展现给用户（广义，比如客户端）的形式，View根据一个或者多个Model的数据进行展示   models&#x2F;  实现models层 Model为模型，自身含">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-23T09:31:53.000Z">
+<meta property="article:modified_time" content="2020-04-23T10:16:08.152Z">
+<meta property="article:author" content="小半">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="Node">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="小半" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">小半</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Express中的MVC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/" class="article-date">
+  <time datetime="2020-04-23T09:31:53.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Express中的MVC
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Express中的MVC"><a href="#Express中的MVC" class="headerlink" title="Express中的MVC"></a>Express中的MVC</h1><h2 id="MVC框架中的目录结构"><a href="#MVC框架中的目录结构" class="headerlink" title="MVC框架中的目录结构"></a>MVC框架中的目录结构</h2><ol>
+<li><p>routes/</p>
+<ul>
+<li><p>实现control层</p>
+</li>
+<li><p>Controller为控制器，负责接收用户请求，操作或提取model并最终交由view渲染</p>
+</li>
+</ul>
+</li>
+<li><p>views/</p>
+<ul>
+<li>实现view层</li>
+<li>View为视图，体现为最终展现给用户（广义，比如客户端）的形式，View根据一个或者多个Model的数据进行展示</li>
+</ul>
+</li>
+<li><p>models/</p>
+<ul>
+<li>实现models层</li>
+<li>Model为模型，自身含有数据结构以及数据结构相关的逻辑，如用户的管理，状态的改变和维护等等，通常还需要解决与数据库之间如何高效通信的问题</li>
+</ul>
+</li>
+<li><p>services/</p>
+<ul>
+<li>对models层的调用</li>
+<li>services则有些特别，由于同层model之间解耦的需要，单个model往往不应该包含太多对其他model的操作，我们应该在services中对一系列逻辑上有关的model进行统一操作</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/" data-id="ck9fve6xt0001oafe6xycb5hp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          node结合mongoose
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">使用express搭建服务器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="tag">Node使用总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Git/" style="font-size: 10px;">Git</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" style="font-size: 10px;">Node使用总结</a> <a href="/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/blog/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 16.67px;">后端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/04/23/git%E4%BD%BF%E7%94%A8%E8%87%AA%E6%9F%A5/">git使用自查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Redis%E4%BD%BF%E7%94%A8%E9%80%9F%E6%9F%A5/">Redis使用速查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/">node结合mongoose</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/">Express中的MVC</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/">使用express搭建服务器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 小半<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Icon的实现方法 | 小半</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="icon的实现方法多种多样，首先最粗暴的方法就是直接使用图片。 图片实现12345678910111213.icon&amp;#123;    background-repeat: no-repeat;    background-size: 20px 20px;    display: inline-block;    height: 20px;    width: 20px;&amp;#125;.icon.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Icon的实现方法">
+<meta property="og:url" content="http://yoursite.com/blog/2020/04/23/Icon%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="小半">
+<meta property="og:description" content="icon的实现方法多种多样，首先最粗暴的方法就是直接使用图片。 图片实现12345678910111213.icon&amp;#123;    background-repeat: no-repeat;    background-size: 20px 20px;    display: inline-block;    height: 20px;    width: 20px;&amp;#125;.icon.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-23T09:23:42.000Z">
+<meta property="article:modified_time" content="2020-04-23T10:16:55.173Z">
+<meta property="article:author" content="小半">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="小半" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">小半</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Icon的实现方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/Icon%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-04-23T09:23:42.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Icon的实现方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>icon的实现方法多种多样，首先最粗暴的方法就是直接使用图片。</p>
+<h2 id="图片实现"><a href="#图片实现" class="headerlink" title="图片实现"></a>图片实现</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon</span>&#123;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">20px</span> <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.check-circle</span>&#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(./img/check-circle.png);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.redo</span>&#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(./img/redo.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>图片实现兼容性强，能兼容所有的浏览器，但是请求数会很多，对浏览器和后台造成多余的负担。</p>
+<h2 id="Sprite实现"><a href="#Sprite实现" class="headerlink" title="Sprite实现"></a>Sprite实现</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon</span>&#123;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(./img/sprite.png);</span><br><span class="line">    <span class="attribute">background-size</span>: auto <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.check-circle</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.redo</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: -<span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Sprite实现能够减少请求，而且兼容性也不差，但有些同学感觉精灵图修改起来太麻烦，那还有什么办法呢？</p>
+<h2 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"iconfont"</span>;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'./img/iconfont.eot?t=1547260449777'</span>); <span class="comment">/* IE9 */</span></span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'./img/iconfont.eot?t=1547260449777#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>), <span class="comment">/* IE6-IE8 */</span></span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'./img/iconfont.woff?t=1547260449777'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'./img/iconfont.ttf?t=1547260449777'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>), <span class="comment">/* chrome, firefox, opera, Safari, Android, iOS 4.2+ */</span></span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'./img/iconfont.svg?t=1547260449777#iconfont'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>); <span class="comment">/* iOS 4.1- */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"iconfont"</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.check-circle</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\e77d"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.redo</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\e787"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>before 伪类实现</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>HTML实体</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span>&amp;#xe77d<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span>&amp;#xe787<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果使用HTML实体那么它的兼容性是完美的，但如果使用伪类那么就要注意兼容性的问题。</p>
+<h2 id="svg实现"><a href="#svg实现" class="headerlink" title="svg实现"></a>svg实现</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">"0"</span> <span class="attr">height</span>=<span class="string">"0"</span> <span class="attr">class</span>=<span class="string">"hidden"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">symbol</span> <span class="attr">viewBox</span>=<span class="string">"0 0 1024 1024"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">id</span>=<span class="string">"check-circle"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8c12.7 17.7 39 17.7 51.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">symbol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">symbol</span> <span class="attr">viewBox</span>=<span class="string">"0 0 1024 1024"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">id</span>=<span class="string">"redo"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M758.2 839.1C851.8 765.9 912 651.9 912 523.9 912 303 733.5 124.3 512.6 124 291.4 123.7 112 302.8 112 523.9c0 125.2 57.5 236.9 147.6 310.2 3.5 2.8 8.6 2.2 11.4-1.3l39.4-50.5c2.7-3.4 2.1-8.3-1.2-11.1-8.1-6.6-15.9-13.7-23.4-21.2-29.4-29.4-52.5-63.6-68.6-101.7C200.4 609 192 567.1 192 523.9s8.4-85.1 25.1-124.5c16.1-38.1 39.2-72.3 68.6-101.7 29.4-29.4 63.6-52.5 101.7-68.6C426.9 212.4 468.8 204 512 204s85.1 8.4 124.5 25.1c38.1 16.1 72.3 39.2 101.7 68.6 29.4 29.4 52.5 63.6 68.6 101.7 16.7 39.4 25.1 81.3 25.1 124.5s-8.4 85.1-25.1 124.5c-16.1 38.1-39.2 72.3-68.6 101.7-9.3 9.3-19.1 18-29.3 26L668.2 724c-4.1-5.3-12.5-3.5-14.1 3l-39.6 162.2c-1.2 5 2.6 9.9 7.7 9.9l167 .8c6.7 0 10.5-7.7 6.3-12.9l-37.3-47.9z"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">symbol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">use</span> <span class="attr">xlink:href</span>=<span class="string">"#check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">use</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">use</span> <span class="attr">xlink:href</span>=<span class="string">"#redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">use</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>svg最大的好处就是不会出现锯齿，保证图片的绝对清晰。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/Icon%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" data-id="ck9fve6xx0005oafegcly6oz0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/04/23/%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          搭建http服务器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/04/23/Form%E8%A1%A8%E5%8D%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Form表单</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="tag">Node使用总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Git/" style="font-size: 10px;">Git</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" style="font-size: 10px;">Node使用总结</a> <a href="/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/blog/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 16.67px;">后端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/04/23/git%E4%BD%BF%E7%94%A8%E8%87%AA%E6%9F%A5/">git使用自查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Redis%E4%BD%BF%E7%94%A8%E9%80%9F%E6%9F%A5/">Redis使用速查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/">node结合mongoose</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/">Express中的MVC</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/">使用express搭建服务器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 小半<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

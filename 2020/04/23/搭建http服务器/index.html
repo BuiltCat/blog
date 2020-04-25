@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>搭建http服务器 | 小半</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如何使用Node.js构建简单服务器？在本文中您将学会如何用Node.js构建一个简单的http，并了解Node.js相关知识。 Hello world创建app.js, 粘贴下面代码，再使用 1node app.js 运行该代码，即可构建一个简单的Node服务器。 12345678910111213const http &#x3D; require(&#39;http&#39;)const hostname &#x3D; &#39;127">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建http服务器">
+<meta property="og:url" content="http://yoursite.com/blog/2020/04/23/%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
+<meta property="og:site_name" content="小半">
+<meta property="og:description" content="如何使用Node.js构建简单服务器？在本文中您将学会如何用Node.js构建一个简单的http，并了解Node.js相关知识。 Hello world创建app.js, 粘贴下面代码，再使用 1node app.js 运行该代码，即可构建一个简单的Node服务器。 12345678910111213const http &#x3D; require(&#39;http&#39;)const hostname &#x3D; &#39;127">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-23T09:27:46.000Z">
+<meta property="article:modified_time" content="2020-04-25T16:38:13.626Z">
+<meta property="article:author" content="小半">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="Node使用总结">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="小半" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">小半</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-搭建http服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+  <time datetime="2020-04-23T09:27:46.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      搭建http服务器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如何使用Node.js构建简单服务器？在本文中您将学会如何用Node.js构建一个简单的http，并了解Node.js相关知识。</p>
+<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2><p>创建<code>app.js</code>, 粘贴下面代码，再使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure>
+<p>运行该代码，即可构建一个简单的Node服务器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span></span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'Hello World'</span>);</span><br><span class="line">&#125;) </span><br><span class="line">server.listen(port, hostname, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="简单路由"><a href="#简单路由" class="headerlink" title="简单路由"></a>简单路由</h2><p>上面的代码只是简单的构建了一个服务器，我们并不能根据请求的Url来输出需要的内容。<br>下面让我们来编写一个简单的路由，来实现根据Url输出需要的内容。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先引入Node中的url模块来解析请求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pathname = url.parse(req.url).pathname</span><br></pre></td></tr></table></figure>
+<p>接下来让我们编写不同请求下，所需要执行的函数。</p>
+<ol>
+<li>当访问页面<code>&#39;/&#39;</code>时，页面输出<code>index</code></li>
+<li>当访问页面<code>&#39;/hello&#39;</code>时，页面输出<code>hello</code></li>
+<li>当访问页面<code>&#39;/world&#39;</code>时，页面输出<code>world</code></li>
+<li>当访问其他页面时，页面输出<code>not find</code></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/index'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/hello'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">world</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/world'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notFind</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">404</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/not find'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="编写路由"><a href="#编写路由" class="headerlink" title="编写路由"></a>编写路由</h3><p>首先我们定义一个Map来存放每个请求所对应执行的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handles = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">handles.set(<span class="string">'/'</span>, index)</span><br><span class="line">handles.set(<span class="string">'/hello'</span>, hello)</span><br><span class="line">handles.set(<span class="string">'/world'</span>, world)</span><br></pre></td></tr></table></figure>
+
+<p>定义route函数，将每次请求的url传入route，当包含对应url时，执行对应的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> route = <span class="function"><span class="keyword">function</span>(<span class="params">handles, pathname, res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(handles.has(pathname))&#123;</span><br><span class="line">        <span class="keyword">const</span> handle = handles.get(pathname)</span><br><span class="line">        handle(res)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        notFind(res)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">'url'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span></span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span></span><br><span class="line"><span class="comment">/*** 执行函数 ***/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/index'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/hello'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">world</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/world'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notFind</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">404</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/not find'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*** 路由实现 ***/</span></span><br><span class="line"><span class="keyword">const</span> handles = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">handles.set(<span class="string">'/'</span>, index)</span><br><span class="line">handles.set(<span class="string">'/hello'</span>, hello)</span><br><span class="line">handles.set(<span class="string">'/world'</span>, world)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> route = <span class="function"><span class="keyword">function</span>(<span class="params">handles, pathname, res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(handles.has(pathname))&#123;</span><br><span class="line">        <span class="keyword">const</span> handle = handles.get(pathname)</span><br><span class="line">        handle(res)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        notFind(res)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> pathname = url.parse(req.url).pathname</span><br><span class="line">    route(handles, pathname, res)</span><br><span class="line">&#125;) </span><br><span class="line"></span><br><span class="line">server.listen(port, hostname, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="https://nodejs.org/api/http.html" target="_blank" rel="noopener">Node.js Documentation HTTP</a><br><a href="https://nodejs.org/api/url.html" target="_blank" rel="noopener">Node.js Documentation URL</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ck9fve6z3000zoafe3nk26hsy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="tag">Node使用总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用express搭建服务器
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2020/04/23/Icon%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Icon的实现方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="tag">Node使用总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Git/" style="font-size: 10px;">Git</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" style="font-size: 10px;">Node使用总结</a> <a href="/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/blog/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 16.67px;">后端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/04/23/git%E4%BD%BF%E7%94%A8%E8%87%AA%E6%9F%A5/">git使用自查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Redis%E4%BD%BF%E7%94%A8%E9%80%9F%E6%9F%A5/">Redis使用速查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/">node结合mongoose</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/">Express中的MVC</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/">使用express搭建服务器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 小半<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

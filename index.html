@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>小半</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="小半">
+<meta property="og:url" content="http://yoursite.com/blog/index.html">
+<meta property="og:site_name" content="小半">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="小半">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="小半" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">小半</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-git使用自查" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/git%E4%BD%BF%E7%94%A8%E8%87%AA%E6%9F%A5/" class="article-date">
+  <time datetime="2020-04-23T09:37:19.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Git/">Git</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/git%E4%BD%BF%E7%94%A8%E8%87%AA%E6%9F%A5/">git使用自查</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git使用指南"><a href="#Git使用指南" class="headerlink" title="Git使用指南"></a>Git使用指南</h1><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><ol>
+<li>设置姓名与邮箱<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;name&quot;</span><br></pre></td></tr></table></figure></li>
+<li>clone项目<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 地址</span><br></pre></td></tr></table></figure></li>
+<li>修改<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add 文件</span><br></pre></td></tr></table></figure></li>
+<li>提交<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -a</span><br></pre></td></tr></table></figure></li>
+<li>上传<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></li>
+<li>查看状态<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<h2 id="推送相关操作"><a href="#推送相关操作" class="headerlink" title="推送相关操作"></a>推送相关操作</h2></li>
+<li>查看推送状态<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure></li>
+<li>添加一个远程标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add 标签名 地址</span><br></pre></td></tr></table></figure></li>
+<li>删除标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove 标签名</span><br></pre></td></tr></table></figure></li>
+<li>修改标签对应地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url 标签名 地址</span><br></pre></td></tr></table></figure></li>
+<li>修改标签名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rename 旧标签名 新标签名</span><br></pre></td></tr></table></figure>
+<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2></li>
+<li>查看分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure></li>
+<li>创建分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure></li>
+<li>切换分析<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure></li>
+<li>合并分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支名</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/git%E4%BD%BF%E7%94%A8%E8%87%AA%E6%9F%A5/" data-id="ck9fve6z1000woafe8fc17yf7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Redis使用速查" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/Redis%E4%BD%BF%E7%94%A8%E9%80%9F%E6%9F%A5/" class="article-date">
+  <time datetime="2020-04-23T09:35:45.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/Redis%E4%BD%BF%E7%94%A8%E9%80%9F%E6%9F%A5/">Redis使用速查</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>key-value</p>
+</blockquote>
+<ul>
+<li>set key vlaue 设置键值对</li>
+<li>get key 得到键值对</li>
+<li>del key 删除键值对</li>
+<li>expire key second 设置键值对的过期时间</li>
+<li>flushall 删除数据库所有键值对</li>
+</ul>
+<blockquote>
+<p>key-member</p>
+</blockquote>
+<ul>
+<li>sadd key member 设置键数组</li>
+<li>smembers key 得到键数组</li>
+<li>sismember key value 查看value是否在key中</li>
+<li>scard key 查看key中元素个数</li>
+<li>srem key value 删除key中的value元素</li>
+<li>spop key 从key中取出一个值，并从key中删除</li>
+<li>srandmember key 从key中取出一个值</li>
+<li>incrby key -1 将键值减一</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/Redis%E4%BD%BF%E7%94%A8%E9%80%9F%E6%9F%A5/" data-id="ck9fve6ym000ooafe6zcr4tgt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-node结合mongoose" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/" class="article-date">
+  <time datetime="2020-04-23T09:34:58.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/">node结合mongoose</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mongoose"><a href="#mongoose" class="headerlink" title="mongoose"></a>mongoose</h1><h2 id="创建数据库连接"><a href="#创建数据库连接" class="headerlink" title="创建数据库连接"></a>创建数据库连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 引入mongoose</span><br><span class="line">const mongoose &#x3D; require(&#39;mongoose&#39;) </span><br><span class="line">&#x2F;&#x2F; 设置连接uri</span><br><span class="line">const uri &#x3D; &#96;mongodb:&#x2F;&#x2F;ip:端口号&#x2F;库名&#96; </span><br><span class="line">&#x2F;&#x2F; 添加连接</span><br><span class="line">mongoose.connct(uri,&#123;</span><br><span class="line">    userMongoClient: true</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const db &#x3D; mongoose.Connection;</span><br><span class="line"></span><br><span class="line">const Schema &#x3D; mongoose.Schema(&#123;</span><br><span class="line">    &#x2F;&#x2F; 存入数据规则</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const Modle &#x3D; mongoose.Modle(</span><br><span class="line">    &#39;表名&#39;,</span><br><span class="line">    Schema</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="向数据库中插入数据"><a href="#向数据库中插入数据" class="headerlink" title="向数据库中插入数据"></a>向数据库中插入数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 插入数据库</span><br><span class="line">const newData &#x3D; new Modle(&#123;</span><br><span class="line">    &#x2F;&#x2F; 字段</span><br><span class="line">&#125;)</span><br><span class="line">newData.save()</span><br></pre></td></tr></table></figure>
+<h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><h3 id="获取单条数据"><a href="#获取单条数据" class="headerlink" title="获取单条数据"></a>获取单条数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 查询数据库</span><br><span class="line">const query &#x3D; Modle.findOne(</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; filter</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; 筛选器</span><br><span class="line">    &#125;,</span><br><span class="line">    callback</span><br><span class="line">)</span><br><span class="line">const result &#x3D; query.then();</span><br></pre></td></tr></table></figure>
+<h3 id="获取多条数据"><a href="#获取多条数据" class="headerlink" title="获取多条数据"></a>获取多条数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 查询数据库</span><br><span class="line">const query &#x3D; Modle.find(</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; filter</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; 筛选器</span><br><span class="line">    &#125;,</span><br><span class="line">    callback</span><br><span class="line">)</span><br><span class="line">const result &#x3D; query.then();</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/" data-id="ck9fve6z50013oafe5b1pbfbk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Express中的MVC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/" class="article-date">
+  <time datetime="2020-04-23T09:31:53.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/">Express中的MVC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Express中的MVC"><a href="#Express中的MVC" class="headerlink" title="Express中的MVC"></a>Express中的MVC</h1><h2 id="MVC框架中的目录结构"><a href="#MVC框架中的目录结构" class="headerlink" title="MVC框架中的目录结构"></a>MVC框架中的目录结构</h2><ol>
+<li><p>routes/</p>
+<ul>
+<li><p>实现control层</p>
+</li>
+<li><p>Controller为控制器，负责接收用户请求，操作或提取model并最终交由view渲染</p>
+</li>
+</ul>
+</li>
+<li><p>views/</p>
+<ul>
+<li>实现view层</li>
+<li>View为视图，体现为最终展现给用户（广义，比如客户端）的形式，View根据一个或者多个Model的数据进行展示</li>
+</ul>
+</li>
+<li><p>models/</p>
+<ul>
+<li>实现models层</li>
+<li>Model为模型，自身含有数据结构以及数据结构相关的逻辑，如用户的管理，状态的改变和维护等等，通常还需要解决与数据库之间如何高效通信的问题</li>
+</ul>
+</li>
+<li><p>services/</p>
+<ul>
+<li>对models层的调用</li>
+<li>services则有些特别，由于同层model之间解耦的需要，单个model往往不应该包含太多对其他model的操作，我们应该在services中对一系列逻辑上有关的model进行统一操作</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/" data-id="ck9fve6xt0001oafe6xycb5hp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Express基础总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2020-04-23T09:30:50.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/">使用express搭建服务器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Express-基础"><a href="#Express-基础" class="headerlink" title="Express 基础"></a>Express 基础</h1><h2 id="通过express搭建服务器"><a href="#通过express搭建服务器" class="headerlink" title="通过express搭建服务器"></a>通过express搭建服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const express &#x3D; require(&#39;express&#39;)</span><br><span class="line">const http &#x3D; require(&#39;http&#39;)</span><br><span class="line">const app &#x3D; express()</span><br><span class="line">const server &#x3D; http.createServer(app)</span><br><span class="line">server.listen(&#39;8080&#39;)</span><br></pre></td></tr></table></figure>
+<h2 id="express中间件"><a href="#express中间件" class="headerlink" title="express中间件"></a>express中间件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">app.use( &#39;path&#39; , (req, res) &#x3D;&gt; &#123;</span><br><span class="line">    &#x2F;&#x2F; code ....</span><br><span class="line">&#125;)</span><br><span class="line">app.use( &#39;path&#39; , (req, res, next) &#x3D;&gt; &#123;</span><br><span class="line">    &#x2F;&#x2F; code... </span><br><span class="line">    next() &#x2F;&#x2F; 进入下一个中间件</span><br><span class="line">&#125;)</span><br><span class="line">app.use(&#39;path&#39; , (req, res, next) &#x3D;&gt; &#123;</span><br><span class="line">    &#x2F;&#x2F; code...</span><br><span class="line">    next(err) &#x2F;&#x2F; 进入错误处理中间件</span><br><span class="line">&#125;)</span><br><span class="line">app.use((err, req, res) &#x3D;&gt; &#123;</span><br><span class="line">    &#x2F;&#x2F; 错误处理中间件</span><br><span class="line">    console.error(err.stack);</span><br><span class="line">    res.status(500).send(&#39;Something broke!&#39;);</span><br><span class="line">&#125;)</span><br><span class="line">app.use(</span><br></pre></td></tr></table></figure>
+<h2 id="body-parser"><a href="#body-parser" class="headerlink" title="body-parser"></a>body-parser</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const bodyparser &#x3D; require(&#39;body-parser&#39;)</span><br><span class="line"></span><br><span class="line">app.use(bodyParser.json())</span><br><span class="line">app.use(bodyParser.urlencoded(&#123;</span><br><span class="line">    extended: false</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+
+<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><ol>
+<li>req.params:识别定义路径时以冒号开头的参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 请求路由为127.0.0.1&#x2F;user&#x2F;wangzhonghao</span><br><span class="line">router.use(&#39;&#x2F;user&#x2F;:name&#39;, (req,res) &#x3D;&gt; &#123;</span><br><span class="line">    console.log(req.params.name)  &#x2F;&#x2F; 结果为wangzhonghao</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>req.body:经过body-parser转码后的body对象</li>
+<li>req.method:请求方法</li>
+<li>req.query:经过node原生querystring或者qs库识别的http query “<a href="http://localhost:3200/?name=123&amp;age=321&quot;" target="_blank" rel="noopener">http://localhost:3200/?name=123&amp;age=321&quot;</a></li>
+<li>req.get:获取header</li>
+</ol>
+<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><ol>
+<li>res.send:发送内容</li>
+<li>res.append:在请求头中加入内容</li>
+<li>res.redirect:重定向请求</li>
+<li>res.json:发送JSON给客户端</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/" data-id="ck9fve6xp0000oafe53j7cu4f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-搭建http服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+  <time datetime="2020-04-23T09:27:46.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1%E5%99%A8/">搭建http服务器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如何使用Node.js构建简单服务器？在本文中您将学会如何用Node.js构建一个简单的http，并了解Node.js相关知识。</p>
+<h2 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello world"></a>Hello world</h2><p>创建<code>app.js</code>, 粘贴下面代码，再使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure>
+<p>运行该代码，即可构建一个简单的Node服务器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span></span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'Hello World'</span>);</span><br><span class="line">&#125;) </span><br><span class="line">server.listen(port, hostname, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="简单路由"><a href="#简单路由" class="headerlink" title="简单路由"></a>简单路由</h2><p>上面的代码只是简单的构建了一个服务器，我们并不能根据请求的Url来输出需要的内容。<br>下面让我们来编写一个简单的路由，来实现根据Url输出需要的内容。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>首先引入Node中的url模块来解析请求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pathname = url.parse(req.url).pathname</span><br></pre></td></tr></table></figure>
+<p>接下来让我们编写不同请求下，所需要执行的函数。</p>
+<ol>
+<li>当访问页面<code>&#39;/&#39;</code>时，页面输出<code>index</code></li>
+<li>当访问页面<code>&#39;/hello&#39;</code>时，页面输出<code>hello</code></li>
+<li>当访问页面<code>&#39;/world&#39;</code>时，页面输出<code>world</code></li>
+<li>当访问其他页面时，页面输出<code>not find</code></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/index'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/hello'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">world</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/world'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notFind</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">404</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/not find'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="编写路由"><a href="#编写路由" class="headerlink" title="编写路由"></a>编写路由</h3><p>首先我们定义一个Map来存放每个请求所对应执行的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> handles = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">handles.set(<span class="string">'/'</span>, index)</span><br><span class="line">handles.set(<span class="string">'/hello'</span>, hello)</span><br><span class="line">handles.set(<span class="string">'/world'</span>, world)</span><br></pre></td></tr></table></figure>
+
+<p>定义route函数，将每次请求的url传入route，当包含对应url时，执行对应的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> route = <span class="function"><span class="keyword">function</span>(<span class="params">handles, pathname, res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(handles.has(pathname))&#123;</span><br><span class="line">        <span class="keyword">const</span> handle = handles.get(pathname)</span><br><span class="line">        handle(res)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        notFind(res)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">'url'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span></span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span></span><br><span class="line"><span class="comment">/*** 执行函数 ***/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/index'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/hello'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">world</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">200</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/world'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notFind</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">    res.statusCode = <span class="number">404</span></span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'/not find'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*** 路由实现 ***/</span></span><br><span class="line"><span class="keyword">const</span> handles = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">handles.set(<span class="string">'/'</span>, index)</span><br><span class="line">handles.set(<span class="string">'/hello'</span>, hello)</span><br><span class="line">handles.set(<span class="string">'/world'</span>, world)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> route = <span class="function"><span class="keyword">function</span>(<span class="params">handles, pathname, res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(handles.has(pathname))&#123;</span><br><span class="line">        <span class="keyword">const</span> handle = handles.get(pathname)</span><br><span class="line">        handle(res)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        notFind(res)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> pathname = url.parse(req.url).pathname</span><br><span class="line">    route(handles, pathname, res)</span><br><span class="line">&#125;) </span><br><span class="line"></span><br><span class="line">server.listen(port, hostname, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="https://nodejs.org/api/http.html" target="_blank" rel="noopener">Node.js Documentation HTTP</a><br><a href="https://nodejs.org/api/url.html" target="_blank" rel="noopener">Node.js Documentation URL</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ck9fve6z3000zoafe3nk26hsy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="tag">Node使用总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Icon的实现方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/Icon%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-04-23T09:23:42.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/Icon%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/">Icon的实现方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>icon的实现方法多种多样，首先最粗暴的方法就是直接使用图片。</p>
+<h2 id="图片实现"><a href="#图片实现" class="headerlink" title="图片实现"></a>图片实现</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon</span>&#123;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">20px</span> <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.check-circle</span>&#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(./img/check-circle.png);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.redo</span>&#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(./img/redo.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>图片实现兼容性强，能兼容所有的浏览器，但是请求数会很多，对浏览器和后台造成多余的负担。</p>
+<h2 id="Sprite实现"><a href="#Sprite实现" class="headerlink" title="Sprite实现"></a>Sprite实现</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon</span>&#123;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(./img/sprite.png);</span><br><span class="line">    <span class="attribute">background-size</span>: auto <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.check-circle</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span><span class="selector-class">.redo</span>&#123;</span><br><span class="line">    <span class="attribute">background-position</span>: -<span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Sprite实现能够减少请求，而且兼容性也不差，但有些同学感觉精灵图修改起来太麻烦，那还有什么办法呢？</p>
+<h2 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"iconfont"</span>;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'./img/iconfont.eot?t=1547260449777'</span>); <span class="comment">/* IE9 */</span></span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'./img/iconfont.eot?t=1547260449777#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>), <span class="comment">/* IE6-IE8 */</span></span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'./img/iconfont.woff?t=1547260449777'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'./img/iconfont.ttf?t=1547260449777'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>), <span class="comment">/* chrome, firefox, opera, Safari, Android, iOS 4.2+ */</span></span><br><span class="line">    <span class="built_in">url</span>(<span class="string">'./img/iconfont.svg?t=1547260449777#iconfont'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>); <span class="comment">/* iOS 4.1- */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"iconfont"</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.check-circle</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\e77d"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.redo</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\e787"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>before 伪类实现</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>HTML实体</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span>&amp;#xe77d<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span>&amp;#xe787<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果使用HTML实体那么它的兼容性是完美的，但如果使用伪类那么就要注意兼容性的问题。</p>
+<h2 id="svg实现"><a href="#svg实现" class="headerlink" title="svg实现"></a>svg实现</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">"0"</span> <span class="attr">height</span>=<span class="string">"0"</span> <span class="attr">class</span>=<span class="string">"hidden"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">symbol</span> <span class="attr">viewBox</span>=<span class="string">"0 0 1024 1024"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">id</span>=<span class="string">"check-circle"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8c12.7 17.7 39 17.7 51.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">symbol</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">symbol</span> <span class="attr">viewBox</span>=<span class="string">"0 0 1024 1024"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">id</span>=<span class="string">"redo"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M758.2 839.1C851.8 765.9 912 651.9 912 523.9 912 303 733.5 124.3 512.6 124 291.4 123.7 112 302.8 112 523.9c0 125.2 57.5 236.9 147.6 310.2 3.5 2.8 8.6 2.2 11.4-1.3l39.4-50.5c2.7-3.4 2.1-8.3-1.2-11.1-8.1-6.6-15.9-13.7-23.4-21.2-29.4-29.4-52.5-63.6-68.6-101.7C200.4 609 192 567.1 192 523.9s8.4-85.1 25.1-124.5c16.1-38.1 39.2-72.3 68.6-101.7 29.4-29.4 63.6-52.5 101.7-68.6C426.9 212.4 468.8 204 512 204s85.1 8.4 124.5 25.1c38.1 16.1 72.3 39.2 101.7 68.6 29.4 29.4 52.5 63.6 68.6 101.7 16.7 39.4 25.1 81.3 25.1 124.5s-8.4 85.1-25.1 124.5c-16.1 38.1-39.2 72.3-68.6 101.7-9.3 9.3-19.1 18-29.3 26L668.2 724c-4.1-5.3-12.5-3.5-14.1 3l-39.6 162.2c-1.2 5 2.6 9.9 7.7 9.9l167 .8c6.7 0 10.5-7.7 6.3-12.9l-37.3-47.9z"</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">symbol</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">use</span> <span class="attr">xlink:href</span>=<span class="string">"#check-circle"</span>&gt;</span><span class="tag">&lt;/<span class="name">use</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">class</span>=<span class="string">"icon"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">use</span> <span class="attr">xlink:href</span>=<span class="string">"#redo"</span>&gt;</span><span class="tag">&lt;/<span class="name">use</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>svg最大的好处就是不会出现锯齿，保证图片的绝对清晰。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/Icon%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" data-id="ck9fve6xx0005oafegcly6oz0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Form表单" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/Form%E8%A1%A8%E5%8D%95/" class="article-date">
+  <time datetime="2020-04-23T09:22:45.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/Form%E8%A1%A8%E5%8D%95/">Form表单</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Form表单是前端向后台传递数据的大门，通过Form表单，可以把数据传输到后端服务器进行处理。<br>通常用<code>&lt;form&gt;</code>标签包裹，常见形式如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"./page"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"请输入用户名"</span> <span class="attr">name</span>=<span class="string">"username"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"password"</span>&gt;</span>密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"请输入密码"</span> <span class="attr">name</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        爱好</span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"game"</span>&gt;</span>游戏<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"game"</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"游戏"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"movie"</span>&gt;</span>电影<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"movie"</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">value</span>=<span class="string">"电影"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        性别</span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"man"</span>&gt;</span>男<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"man"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"男"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"woman"</span>&gt;</span>女<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"woman"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"女"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"locate"</span>&gt;</span>地点<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"locate"</span> <span class="attr">id</span>=<span class="string">"locate"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"广东"</span>&gt;</span>广东<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"北京"</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"上海"</span>&gt;</span>上海<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="lt-Form-gt-标签"><a href="#lt-Form-gt-标签" class="headerlink" title="&lt;Form&gt;标签"></a><code>&lt;Form&gt;</code>标签</h2><p><code>&lt;form&gt;</code>标签包围着整个表单结构，只有在<code>&lt;form&gt;</code>区域内的表单元素才能与后台进行交互，其中<code>action</code>中为提交数据的url，<code>method</code>中为提交数据的方式，常用的有<code>GET</code>和<code>POST</code>。<code>GET</code>把请求数据放在URL上，格式为URL？name1=value1&amp;name2=value2,用？分割URL与请求数据，每对数据用&amp;隔开，而POST则是把请求数据放在<code>request body</code>里面,也就是说为什么<code>POST</code>请求更安全；<code>GET</code>的请求数据最多为2k，而<code>POST</code>请求大小理论上是没有限制的。那为什么还要用<code>GET</code>呢？那是因为<code>GET</code>更加高效。</p>
+<h2 id="lt-input-gt-标签"><a href="#lt-input-gt-标签" class="headerlink" title="&lt;input&gt;标签"></a><code>&lt;input&gt;</code>标签</h2><h3 id="lt-input-gt-标签的常用属性"><a href="#lt-input-gt-标签的常用属性" class="headerlink" title="&lt;input&gt;标签的常用属性"></a><code>&lt;input&gt;</code>标签的常用属性</h3><h4 id="type"><a href="#type" class="headerlink" title="type"></a>type</h4><p>type表示<code>&lt;input&gt;</code>的类型，默认类型为text，用来输入少量文本信息，其他常用类型分别为：</p>
+<ul>
+<li>password：用来输入密码。</li>
+<li>submit：提交数据</li>
+<li>bo</li>
+<li>checkbox：复选框</li>
+<li>radio：单选框</li>
+<li>email：输入邮箱</li>
+<li>date：输入日期</li>
+<li>color：颜色选择器</li>
+<li>range：滑块控件</li>
+<li>hidden：不显示但可以提交数据的控件</li>
+</ul>
+<h4 id="name和value"><a href="#name和value" class="headerlink" title="name和value"></a>name和value</h4><p>name作为传入后台的标识，value作为传入后台的数据。</p>
+<h4 id="disable"><a href="#disable" class="headerlink" title="disable"></a>disable</h4><p>当<code>&lt;input&gt;</code>标签包含disable属性时,禁用该<code>&lt;input&gt;</code>标签。</p>
+<h4 id="placeholder"><a href="#placeholder" class="headerlink" title="placeholder"></a>placeholder</h4><p>在输入框显示提示信息。</p>
+<h2 id="lt-label-gt-标签"><a href="#lt-label-gt-标签" class="headerlink" title="&lt;label&gt;标签"></a><code>&lt;label&gt;</code>标签</h2><p>当<code>&lt;label&gt;</code>标签的for属性与<code>&lt;input&gt;</code>标签的id相同时（如下），</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"man"</span>&gt;</span>男<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"man"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"男"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"woman"</span>&gt;</span>女<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"woman"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"女"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>点击<code>&lt;label&gt;</code>标签时，相关联的<code>&lt;input&gt;</code>标签同时会被激活。也可以不用for属性，用下面的形式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>男</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"man"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"男"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>女</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"woman"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"女"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="一些其他标签"><a href="#一些其他标签" class="headerlink" title="一些其他标签"></a>一些其他标签</h2><h3 id="lt-select-gt-标签"><a href="#lt-select-gt-标签" class="headerlink" title="&lt;select&gt;标签"></a><code>&lt;select&gt;</code>标签</h3><p><code>&lt;select&gt;</code>标签为下拉框控件，其中每个<code>&lt;option&gt;</code>标签都是其中的一个选项，标签中的为下拉框显示的内容，而value为其中的传入后台的值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"locate"</span> <span class="attr">id</span>=<span class="string">"locate"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"广东"</span>&gt;</span>广东<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"北京"</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"上海"</span>&gt;</span>上海<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="lt-textarea-gt-标签"><a href="#lt-textarea-gt-标签" class="headerlink" title="&lt;textarea&gt;标签"></a><code>&lt;textarea&gt;</code>标签</h3><p><code>&lt;textarea&gt;</code>标签为多行纯文本输入框，该元素没有value属性，标签中间的文字即为该元素的值，cols与rows为元素的宽和高，也可使用css设定。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/Form%E8%A1%A8%E5%8D%95/" data-id="ck9fve6xw0004oafegdyp5xht" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-从输入url到页面展示发生了什么" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/%E4%BB%8E%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/" class="article-date">
+  <time datetime="2020-04-23T09:21:07.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/%E4%BB%8E%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/">从输入url到页面展示发生了什么</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、输入URL，解析DNS"><a href="#一、输入URL，解析DNS" class="headerlink" title="一、输入URL，解析DNS"></a>一、输入URL，解析DNS</h2><p>当你在浏览器输入域名时，浏览器会进行DNS解析，将域名翻译为IP地址，互联网上的每台主机都有一个唯一的IP地址，通过IP地址就可访问目标主机。<br>DNS解析是按照如下步骤进行的，首先在浏览器缓存中查看找IP地址，没有找到的话，会在本地域名服务器下进行寻找，如果又没有找到，将继续向根域名服务器进行查找，如果还没有找到，就向顶级域名服务器进行查找，依次类推。并且找到后会缓存到本地，供下次使用。</p>
+<h2 id="二、建立TCP连接"><a href="#二、建立TCP连接" class="headerlink" title="二、建立TCP连接"></a>二、建立TCP连接</h2><p>HTTP协议是建立在TCP协议之上的，而HTTPS协议则是在HTTP与TCP之间加入了SSL层。</p>
+<h2 id="三、发送HTTP或HTTPS请求"><a href="#三、发送HTTP或HTTPS请求" class="headerlink" title="三、发送HTTP或HTTPS请求"></a>三、发送HTTP或HTTPS请求</h2><p>当建立连接之后,会发送HTTP请求报文,HTTP请求报文分为三个部分:请求行，请求头和请求体。</p>
+<h2 id="四、服务器接收处理请求"><a href="#四、服务器接收处理请求" class="headerlink" title="四、服务器接收处理请求"></a>四、服务器接收处理请求</h2><p>服务器收到请求对请求进行处理,返回HTTP相应报文，HTTP响应报文也分为三个部分:状态码，响应头和响应体。</p>
+<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><p>状态码是由3位数组成，第一个数字定义了响应的类别，且有五种可能取值:</p>
+<ul>
+<li>1xx：指示信息–表示请求已接收，继续处理。  </li>
+<li>2xx：成功–表示请求已被成功接收、理解、接受。</li>
+<li>3xx：重定向–要完成请求必须进行更进一步的操作。</li>
+<li>4xx：客户端错误–请求有语法错误或请求无法实现。</li>
+<li>5xx：服务器端错误–服务器未能实现合法的请求。<h2 id="五、数据返回浏览器，浏览器渲染页面"><a href="#五、数据返回浏览器，浏览器渲染页面" class="headerlink" title="五、数据返回浏览器，浏览器渲染页面"></a>五、数据返回浏览器，浏览器渲染页面</h2>当数据是HTML时，浏览器就会对HTML进行解析与渲染，首先建立DOM树和CSSOM树，之后浏览器会自上而下渲染页面，当遇到脚本标签、样式标签和图片时，会再次发送请求重新进行上述步骤，如果返回css文件，会重新渲染页面加入样式，当返回图片，就在图片位置显示图片。<h3 id="回流（reflow）和重绘（repaint）"><a href="#回流（reflow）和重绘（repaint）" class="headerlink" title="回流（reflow）和重绘（repaint）"></a>回流（reflow）和重绘（repaint）</h3></li>
+<li>回流：当元素的内容，结构，位置或尺寸发生变化，重新计算样式和渲染树。</li>
+<li>重绘：元素的改变只影响元素的外观而不影响布局。</li>
+<li>回流和重绘都是非常消耗性能的，而且回流一定会重绘，而重绘不一定能够回流。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/%E4%BB%8E%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/" data-id="ck9fve6z60015oafebgkvgemw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css选择器和优先级" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/23/css%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E4%BC%98%E5%85%88%E7%BA%A7/" class="article-date">
+  <time datetime="2020-04-23T08:46:48.000Z" itemprop="datePublished">2020-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2020/04/23/css%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E4%BC%98%E5%85%88%E7%BA%A7/">css选择器和优先级</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>css选择器用来选择HTMl当中的元素，来给元素添加相应的样式。分别分为简单选择器，属性选择器，伪类选择器，伪元素选择器和组合选择器。</p>
+<h3 id="简单选择器"><a href="#简单选择器" class="headerlink" title="简单选择器"></a>简单选择器</h3><h4 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器"></a>通用选择器</h4><p>通用选择器（*）可以选择整个页面的所有元素。使用方法如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h4><p>类选择器的形式为“.ClassName”，即在类名之前加一个“.”。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.footer</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">400px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h4><p>ID选择器的形式为“#ID”，即在ID前加一个“#”，值得注意的是一个页面，相同的ID应该只有一个。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"user"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#user</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ID选择器和类选择器的区别"><a href="#ID选择器和类选择器的区别" class="headerlink" title="ID选择器和类选择器的区别"></a>ID选择器和类选择器的区别</h4><p>ID选择器在一个页面通常只对应一个元素，而类选择器则对应则是许多元素，所以一般一个页面只出现一次的用ID像网站的头部，主体和脚部，而多次出现的就采用类。</p>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p>属性选择器选择的是具有某种属性的元素，用<code>[]</code>代表，<code>[]</code>内为要选择的属性。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">disable</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*选择input元素属性中type值为text的元素*/</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=text]</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*选择input元素属性中有disable的元素*/</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[disable]</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="伪选择器"><a href="#伪选择器" class="headerlink" title="伪选择器"></a>伪选择器</h3><h4 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h4><p>伪类选择器是指选择元素的某个状态，部位或者在特定情况下的元素。常用的有：</p>
+<ul>
+<li>:link 未访问的链接。</li>
+<li>:visited 已访问的链接。</li>
+<li>:hover 鼠标悬停在元素上时。</li>
+<li>:active 当鼠标按下和松开时。</li>
+<li>:first-child 一组元素中的第一个元素</li>
+<li>:first-of-type 一组元素中的第一个type元素</li>
+<li>:nth-child(an+b) 匹配对应位置的元素，0n+1就是第一个，2n+0就是2、4、6…这些元素。</li>
+<li>:nth-of-type(an+b) 一组元素中的第an+b个type元素。</li>
+<li>:focus 当元素获得焦点。<blockquote>
+<p>值得注意的是，当使用link、visited、hover、actived时要按照LVHA的顺序，即link-&gt;visited-&gt;hover-&gt;actived。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h4><p>伪元素选择器选择元素的某个部分。常用的有：</p>
+<ul>
+<li>::after 在元素的后面创建一个伪元素，必须包含content属性。</li>
+<li>::before 在元素的前面面创建一个伪元素，必须包含content属性。</li>
+<li>::first-letter 选择第一行的第一个字母。</li>
+<li>::first-line 选择第一行。</li>
+</ul>
+<h3 id="组合选择器"><a href="#组合选择器" class="headerlink" title="组合选择器"></a>组合选择器</h3><ul>
+<li>A,B:包含A元素或B元素的任意元素。</li>
+<li>A B:选择B元素且B元素是A元素的后代。</li>
+<li>A&gt;B:选择B元素且B元素是A元素的直接后代。</li>
+<li>A+B:选择B元素且B元素是A元素的下一个直接相邻元素。</li>
+<li>A~B:选择B元素且B元素是A元素之后的任意元素</li>
+</ul>
+<h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><p>选择器优先级的顺序是：</p>
+<ol>
+<li>!important</li>
+<li>内联元素</li>
+<li>ID选择器</li>
+<li>类选择器 属性选择器 伪类选择器</li>
+<li>标签选择器 伪元素选择器</li>
+<li>通配选择器</li>
+</ol>
+<p>当一个元素同时被多个选择器选择时，记ID选择器的总数为A，类选择器、属性选择器、伪类选择器的总数为B，标签选择器、伪元素选择器总数为C。按A、B、C顺序依次比较，数量越多则优先级越大，当A、B、C数量相等时，则在下面的选择器会覆盖上面的选择器。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2020/04/23/css%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E4%BC%98%E5%85%88%E7%BA%A7/" data-id="ck9fve6yx000roafect3v8vya" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">下一页&gt;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%89%8D%E7%AB%AF/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/%E5%90%8E%E7%AB%AF/">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node/" rel="tag">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" rel="tag">Node使用总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Git/" style="font-size: 10px;">Git</a> <a href="/blog/tags/Node/" style="font-size: 13.33px;">Node</a> <a href="/blog/tags/Node%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" style="font-size: 10px;">Node使用总结</a> <a href="/blog/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/blog/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 16.67px;">后端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/04/23/git%E4%BD%BF%E7%94%A8%E8%87%AA%E6%9F%A5/">git使用自查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Redis%E4%BD%BF%E7%94%A8%E9%80%9F%E6%9F%A5/">Redis使用速查</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/node%E7%BB%93%E5%90%88mongoose/">node结合mongoose</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E4%B8%AD%E7%9A%84MVC/">Express中的MVC</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/23/Express%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93/">使用express搭建服务器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 小半<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
